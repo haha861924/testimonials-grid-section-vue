@@ -10,13 +10,18 @@ module.exports = {
         purplest: '#733FC8',
         dark: '#48556A',
         darkest: '#19202D',
+        gray: '#CFCFCF',
         'light-purple': '#A775F1',
-        'light-purplest': '#733FC8'
+        'light-purplest': '#733FC8',
+        'dark-white': '#ECF2F8'
       },
       fontSize:{
         '11px': '0.6875rem',
         '13px': '0.8125rem'
-      }
+      },
+      lineHeight: {
+        '18': '1.125rem',
+       }
     },
   },
   plugins: [],

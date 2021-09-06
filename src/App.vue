@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center flex justify-center flex-col items-center gap-y-6 my-8">
+  <div class="flex justify-center flex-col items-center gap-y-6 my-16">
     <Card v-for="(n, index) in 5" :key="index" :cardContent="cardContent[index]"></Card>
   </div>
 </template>
@@ -62,3 +62,8 @@ export default {
     },
 }
 </script>
+<style>
+html, body {
+  background-color: #ECF2F8;
+}
+</style>
