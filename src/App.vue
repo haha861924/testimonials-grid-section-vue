@@ -1,10 +1,6 @@
 <template>
   <div class="text-center flex justify-center flex-col items-center gap-y-6 my-8">
-    <Card :cardContent="cardContent[0]"></Card>
-    <Card :cardContent="cardContent[1]"></Card>
-    <Card :cardContent="cardContent[2]"></Card>
-    <Card :cardContent="cardContent[3]"></Card>
-    <Card :cardContent="cardContent[4]"></Card>
+    <Card v-for="(n, index) in 5" :key="index" :cardContent="cardContent[index]"></Card>
   </div>
 </template>
 
@@ -18,7 +14,7 @@ export default {
           cardContent:[
             {
               id: 1,
-              bgColor: 'bg-red-500',
+              bgColor: 'bg-purplest',
               photo: '../src/assets/image-daniel.jpg',
               userName: 'Daniel Clifford',
               userDescribe: 'Verified Graduate',
