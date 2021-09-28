@@ -1,5 +1,6 @@
 <template>
-    <div :class="[`md:w-20 w-4/5 ${cardContent.bgColor} rounded-lg p-8`]">
+    <div :class="[`w-4/5 ${cardContent.bgColor} rounded-lg p-8`,
+                cardContent.id===1 && 'md:bg-red-500']">
         <div class="grid grid-cols-6 gap-y-8">
             <img :src="cardContent.photo" 
             :class="['rounded-full col-span-1 w-7', 
@@ -11,7 +12,7 @@
                     cardContent.id===5 && 'text-dark']">
                         {{cardContent.userName}}
                 </h1>
-                <h4 :class="['text-white text-11px opacity-50 ',
+                <h4 :class="['text-white text-11px opacity-50',
                     cardContent.id===3 && 'text-dark',
                     cardContent.id===5 && 'text-dark']">
                         {{cardContent.userDescribe}}

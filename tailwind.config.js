@@ -21,7 +21,10 @@ module.exports = {
       },
       lineHeight: {
         '18': '1.125rem',
-       }
+       },
+       spacing: {
+        '540/1440': '33.75rem'
+      }
     },
   },
   plugins: [],

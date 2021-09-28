@@ -1,6 +1,10 @@
 <template>
-  <div class="flex justify-center flex-col items-center gap-y-6 my-16">
-    <Card v-for="(n, index) in 5" :key="index" :cardContent="cardContent[index]"></Card>
+  <div class="grid gap-y-6 my-16 h-full w-full place-items-center md:grid-container">
+    <Card :cardContent="cardContent[0]" class="md:item1"></Card>
+    <Card :cardContent="cardContent[1]" class="md:item2"></Card>
+    <Card :cardContent="cardContent[2]" class="md:item3"></Card>
+    <Card :cardContent="cardContent[3]" class="md:item5"></Card>
+    <Card :cardContent="cardContent[4]" class="md:item4"></Card>
   </div>
 </template>
 
@@ -65,5 +69,17 @@ export default {
 <style>
 html, body {
   background-color: #ECF2F8;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header header header menu menu right'
+  'main main footer footer footer right';
 }
 </style>
